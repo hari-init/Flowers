@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./assets/fonts/House\ Minimalist.ttf') format('truetype'),
+        url('./assets/fonts/House\ Minimalist.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyCustomFontOne';
+    src: url('./assets/fonts/AnticSlab-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: whitesmoke;
+    font-family: 'MyCustomFont', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+header {
+    width: 100%;
+    height: 8%;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: absolute;
+    z-index: 1;
+}
+
+header a {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.menu-names {
+    z-index: 1;
+    position: absolute;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    height: 100vh;
+}
+
+.details {
+    font-family: 'MyCustomFont', Arial, sans-serif;
+    z-index: 1;
+    position: absolute;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    right: 0;
+    height: 100vh;
+    font-size: 30px;
+    animation: home-names 1s ease-in-out;
+}
+
+.details p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.menu-names a {
+    font-size: 30px;
+    margin: 10px;
+    cursor: pointer;
+    animation: home-names 1s ease-in-out;
+}
+
+.menu-names a:hover {
+    font-weight: bold;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* footer {
+    width: 100%;
+    height: 8%;
+} */
+
+.home-background img {
+    height: 92vh;
+    object-fit: contain;
+    position: absolute;
+    left: -350px;
+    scale: 5;
+    width: 100%;
+    filter: opacity(1);
+    animation: home-background 1s ease-in-out;
+}
+
+.home-background .home {
+    scale: 2;
+    bottom: -120px;
+}
+
+.home-background .BOP {
+    left: -300px;
+    bottom: -100px;
+}
+
+.home-background .iris {
+    left: -300px;
+    scale: 2;
+    transform: scaleX(-1);
+}
+
+.home-background .peony {
+    scale: 4;
+    bottom: 220px;
+}
+
+.home-background .orchid {
+    scale: 1;
+    left: -400px;
+}
+
+.home-background .cb {
+    scale: 2;
+}
+@keyframes home-background {
+    from {
+        opacity: 0;
+        filter: grayscale();
+    }
+
+    to {
+        opacity: 1;
+        filter: none;
+    }
+}
+@keyframes home-names {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
